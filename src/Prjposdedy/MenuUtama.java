@@ -24,7 +24,7 @@ public class MenuUtama extends javax.swing.JFrame {
     /**
      * Creates new form MenuUtama
      */
-    
+    FrmCariBrg cb=new FrmCariBrg();
     FrmBarang brg=new FrmBarang();
     FrmTrans trans=new FrmTrans();
     ViewPenjualan viwj=new ViewPenjualan();
@@ -53,6 +53,7 @@ public class MenuUtama extends javax.swing.JFrame {
         jmBarang = new javax.swing.JMenuItem();
         jmTransJual = new javax.swing.JMenuItem();
         vp = new javax.swing.JMenuItem();
+        cariBrg = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         detail_trans = new javax.swing.JMenuItem();
         lapor_trans = new javax.swing.JMenuItem();
@@ -97,6 +98,14 @@ public class MenuUtama extends javax.swing.JFrame {
             }
         });
         jMenu1.add(vp);
+
+        cariBrg.setText("Cari Barang");
+        cariBrg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cariBrgActionPerformed(evt);
+            }
+        });
+        jMenu1.add(cariBrg);
 
         jMenuBar1.add(jMenu1);
 
@@ -162,6 +171,13 @@ public class MenuUtama extends javax.swing.JFrame {
         viwj.setVisible(true);
     }//GEN-LAST:event_vpActionPerformed
 
+    private void cariBrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cariBrgActionPerformed
+        // TODO add your handling code here:
+        if(!cb.isVisible())
+            jDesktopPane1.add(cb);
+        cb.setVisible(true);
+    }//GEN-LAST:event_cariBrgActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -198,6 +214,7 @@ public class MenuUtama extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem cariBrg;
     private javax.swing.JMenuItem detail_trans;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
